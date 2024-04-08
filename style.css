@@ -50,9 +50,10 @@ header {
 }
 
 .navigation ul li a:hover {
-  color: rgba(76, 224, 215, 1);
+  color: #4ce0d7;
   cursor: pointer;
   text-shadow: 2px 2px 5px rgb(0, 0, 0);
+
 }
 
 .navigation ul li a {
@@ -502,3 +503,17 @@ h6 {
   box-shadow: 2px 2px 2px rgb(13, 216, 182);
   border-radius: 5px;
 }
+
+
+.btncode {
+  display: none !important;
+  position: absolute;
+  color:#ff5e00 !important;
+}
+
+.category:hover .btncode{
+  display: block!important;
+
+
+}
+

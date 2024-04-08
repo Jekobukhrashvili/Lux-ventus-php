@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <title>Lux Ventus Blog</title>
+
     <?php require "./massive.php" ?>
 
   </head>
@@ -23,18 +24,26 @@
           </div>
           <nav class="navigation">
             <ul>
-              <li>
-                <a href="#">Fashion</a>
-              </li>
-              <li>
-                <a href="#">Lifestyle</a>
-              </li>
-              <li>
-                <a href="#">Spiritual</a>
-              </li>
-              <li>
-                <a href="#">Mental Health</a>
-              </li>
+              <?php
+              foreach ($fashionBtns as $fashionBtn){
+                echo ' <li class="category">
+                        <a href="#"> ' . $fashionBtn['btnname'] . ' </a>
+                        <ul class="btncode">';
+                        
+                    foreach ($fashionBtn['child'] as $btncode) {
+                      echo '<li> 
+                      <a href="#"> ' . $btncode['name'] . ' </a>
+                      </li>';
+                    }
+
+                   
+
+                    echo '</ul>
+                      </li>';
+
+              }                      
+              ?>
+              
               <li>
                 <a class="contact-us" href="#">Contact Us</a>
               </li>
