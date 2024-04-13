@@ -12,6 +12,7 @@
     <title>Lux Ventus Blog</title>
 
     <?php require "./massive.php" ?>
+    <?php include "./function.php" ?>
 
   </head>
   <body>
@@ -22,26 +23,13 @@
           <div class="logo">
             <a href="#"><img src="Images/Footer-logo.png" alt="Logo" /></a>
           </div>
+
+          <!-- NavMenu -->
           <nav class="navigation">
             <ul>
+              
               <?php
-              foreach ($fashionBtns as $fashionBtn){
-                echo ' <li class="category">
-                        <a href="#"> ' . $fashionBtn['btnname'] . ' </a>
-                        <ul class="btncode">';
-                        
-                    foreach ($fashionBtn['child'] as $btncode) {
-                      echo '<li> 
-                      <a href="#"> ' . $btncode['name'] . ' </a>
-                      </li>';
-                    }
-
-                   
-
-                    echo '</ul>
-                      </li>';
-
-              }                      
+                 navbutton($fashionBtns);
               ?>
               
               <li>
@@ -58,6 +46,8 @@
               </li>
             </ul>
           </nav>
+          <!-- NavMenu -->
+
         </div>
       </div>
     </header>
