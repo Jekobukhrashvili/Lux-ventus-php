@@ -11,7 +11,7 @@
     />
     <title>Lux Ventus Blog</title>
 
-    <?php require "./massive.php" ?>
+    <?php include "./massive.php" ?>
     <?php include "./function.php" ?>
 
   </head>
@@ -31,19 +31,11 @@
               <?php
                  navbutton($fashionBtns);
               ?>
-              
-              <li>
-                <a class="contact-us" href="#">Contact Us</a>
+                 
+              <li class="contact-us">
+                <a  href="#">Contact Us</a>
               </li>
-              <li>
-                <a href="#"
-                  ><img
-                    class="search-logo"
-                    src="Images/search logo.png"
-                    alt="Search icon"
-                  />
-                </a>
-              </li>
+
             </ul>
           </nav>
           <!-- NavMenu -->
@@ -54,7 +46,7 @@
     <!-- Header-End -->
 
     <main>
-      <!-- First Section start -->
+      <!-- First Section -->
       <section class="first-section">
         <div class="first-section-container">
           <div class="first-section-flex">
@@ -73,9 +65,9 @@
           </div>
         </div>
       </section>
-      <!-- First Section End -->
+      <!-- First Section -->
 
-      <!-- Second-Section-Start -->
+      <!-- Second-Section -->
       <section class="Second-section">
         <div class="topics-container">
           <h2>Topics</h2>
@@ -83,98 +75,35 @@
             <div class="Cards">
 
               <?php
-                  for ($i = 0; $i < 6; $i++){
-                  echo ' <div class="card">
-                  <img src = ' . $cards[$i]['img'] . ' />
-                  <h3> ' . $cards[$i]['title'] . ' </h3>
-                  <button> View More </button>
-                </div> ';
-                }
+            cards2($cards);
             ?>
  
             </div>
           </div>
         </div>
       </section>
+      <!-- Second Section -->
 
       <hr />
+      <br/>
 
 
-      <section class="Third-section">
-        <div class="Third-section-container">
-          <div class="third-img-container">
-            <img src="Images/Third-section-image.png" alt="image3" />
-          </div>
 
-          <div class="text-container">
-            <div class="first-line-content">
-              <img src="Images/Third-section -icon.png" alt="icon" />
-              <h4>Mallory Reyn</h4>
-              <h4>April 14th, 2023</h4>
-              <h4><span>COMING IN HOT!</span></h4>
-            </div>
-            <div class="second-line-content">
-              <h5>The Latest Trends from the Moon Fashion Week.</h5>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
-                sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
-                Vestibulum.
-              </p>
-              <div class="button-div">
-                <button class="arrow-button">&#8594;</button>
-                <button class="second-line-button">READ MORE</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <br /><br />
-      <!-- Section-4-End -->
+          <!-- Third Section -->
+	          <div class="php-container" style="display:flex; flex-direction: column; justify-contenr:center; align-items:center;">
 
 
-          <!-- Fisrt Card -->
-	<div class="php-container" style="display:flex; flex-direction: column; justify-contenr:center; align-items:center;">
+	          	<?php
+                cards($secondCard);
+              ?>
 
+	          </div>
+          <!-- Third Section -->
 
-		<?php
-
-				for ($y = 0; $y < 3; $y++){
-					echo '
-				<div class= "php-div" style="display:flex; gap: 10px; margin-bottom: 30px; justify-contenr:center; align-items:center; "> 
-					<div class="image1-1" >
-					<img class="image11" src="Images/image1-1.png" alt="logo"/>
-					<button class="fashion">' . $secondCard[$y]['buttonName'] . '</button>
-				</div>
-
-				<div class="text-content">
-					<div class="text-content-1">
-						<img src="Images/Third-section -icon.png" alt="Icon" />
-
-						<div class="text-h4">
-							<h4>Mallory Reyn</h4>
-							<h4>' . $secondCard[$y]['date'] . '</h4>
-						</div>
-					</div>
-					<div class="card-content-2">
-						<h5>' . $secondCard[$y]['title'] . ' </h5>
-						<p>' . $secondCard[$y]['paragraph1'] . ' </p>
-						<p>' . $secondCard[$y]['paragraph2'] . '</p>
-						<div class="buttons-4">
-							<button class="second-line-button">READ MORE</button>
-						</div>
-					</div>
-				</div>	
-				</div>' ;
-				
-				}
-				
-			?>
-	</div>
 
       </section>
     </main>
+
     <!-- Footer Start -->
     <footer>
       <div class="Footer-div">
